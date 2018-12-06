@@ -12,7 +12,7 @@ end entity seven_dash_digit_tube_decoder;
 
 architecture sddtd_func of seven_dash_digit_tube_decoder is
 begin
-	process
+	process(lt_n, rbi_n, bi_rbo_n, d)
 	begin
 		if (bi_rbo_n = '1' and lt_n = '1') then
 			if rbi_n = '1' and d = "0000" then

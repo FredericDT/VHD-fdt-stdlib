@@ -27,9 +27,8 @@ begin
 	);
 
 	process
-		variable err_cnt: integer := 0;
-
 	begin
+		bi_rbo_n_t <= '1';
 		lt_n_t <= '1';
 		rbi_n_t <= '1';
 		d_t <= "0000";
