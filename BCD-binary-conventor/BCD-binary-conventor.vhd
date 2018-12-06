@@ -15,7 +15,7 @@ begin
 		o <= i;
 		if i(3) = '1' then
 			if not (i(2) = '0' and i(1) = '0') then
-				o <= "1111";
+				o <= "0000";
 			end if;
 		end if;
 	end process;
