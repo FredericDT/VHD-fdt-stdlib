@@ -1,4 +1,8 @@
 #!/bin/sh
+current_dir="$(dirname $0)"
 ghdl -a $1
-ghdl -e $2
-ghdl -r $2 --vcd=$2.vcd
+tb_file="$(echo $1 | sed -e 's/\(.*\).vhd/\1-tb.vhd/')"
+entity_name="$($current_dir/generate-tb.py $1 $tb_file)"
+ghdl -a $tb_file
+ghdl -e $entity_name
+ghdl -r cfg_tb
