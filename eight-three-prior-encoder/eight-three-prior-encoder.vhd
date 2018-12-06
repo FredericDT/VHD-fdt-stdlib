@@ -12,7 +12,7 @@ end entity eight_three_prior_encoder;
 
 architecture eight_three_prior_encoder_func of eight_three_prior_encoder is
 begin
-	process
+	process(ei, i)
 	begin
 		gs <= '0';
 		eo <= '1';
