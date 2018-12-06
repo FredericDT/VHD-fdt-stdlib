@@ -8,10 +8,13 @@ import os
 ZERO_ONE_ARRAY = ['0', '1']
 
 def get_string_from_product(i):
+    
     if isinstance(i[0], tuple):
         return get_string_from_product(i[0]) + i[1]
-    else:
+    elif isinstance(i, tuple):
         return i[0] + i[1]
+    else:
+        return str(i)
 
 def gen_vector_arrange(length):
     global ZERO_ONE_ARRAY

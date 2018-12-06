@@ -4,5 +4,5 @@ ghdl -a $1
 tb_file="$(echo $1 | sed -e 's/\(.*\).vhd/\1-tb.vhd/')"
 entity_name="$($current_dir/generate-tb.py $1 $tb_file)"
 ghdl -a $tb_file
-ghdl -e $entity_name
-ghdl -r cfg_tb
+ghdl -e cfg_tb
+ghdl -r cfg_tb --vcd="cfg_tb.vcd"
