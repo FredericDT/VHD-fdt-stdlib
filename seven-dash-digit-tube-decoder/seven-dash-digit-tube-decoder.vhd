@@ -3,7 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity seven_dash_digit_tube_decoder is 
 port(
-	lt_n, rbi_n: in std_logic;
+	lt_n: in std_logic;
+       	rbi_n: in std_logic;
 	bi_rbo_n: inout std_logic;
 	d: in std_logic_vector(3 downto 0);
 	o: out std_logic_vector(0 to 6)	
