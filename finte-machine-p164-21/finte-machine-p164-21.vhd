@@ -6,6 +6,7 @@ entity finte_machine_p164_21 is
 port (
 	k: in std_logic;
 	clk: in std_logic;
+	en: in std_logic;
 	o: out std_logic_vector(1 downto 0)
 );
 end entity;
@@ -15,7 +16,7 @@ architecture finte_machine_p164_21_func of finte_machine_p164_21 is
 begin
 	process(clk)
 	begin
-		if (clk'event and clk = '1') then
+		if (en = '1' and clk'event and clk = '1') then
 			case s is
 				when s0 =>
 					if k = '0' then
