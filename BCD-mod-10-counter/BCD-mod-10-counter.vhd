@@ -14,7 +14,7 @@ port(
 );
 end entity bcd_mod_10_counter;
 
-architecture bcd_mod_10_counter_func of bcd_mod_10_counter_func is
+architecture bcd_mod_10_counter_func of bcd_mod_10_counter is
 	signal counter: unsigned(3 downto 0);
 begin
 	process(clk, clr_n)
